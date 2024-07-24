@@ -1,12 +1,15 @@
+import { Link } from 'react-router-dom'
 import GenderCheckbox from './GenderCheckbox'
 
 const Signup = () => {
+  const [inputs, setInputs] = use
+
   return (
     <div className='flex flex-col items-center justify-center min-w-96 mx-auto'>
       <div className='w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding-backdrop-filter backdrop-blur-lg bg-opacity-0'>
         <h1 className='text-3xl font-semibold text-center text-slate-200'>
           Sign-Up&nbsp;
-          <span className='text-slate-900'>
+          <span className='text-orange-500'>
             Nexus<span className='text-amber-500'>Chat</span>
           </span>
         </h1>
@@ -70,12 +73,12 @@ const Signup = () => {
 
           <p className='text-sm'>
             Already have an account?&nbsp;
-            <a
-              href='#'
+            <Link
+              to='/login'
               className='text-sm text-blue-400 hover:underline hover:text-blue-200 mt-2 inline-block transition-colors ease-in-out delay-50'
             >
               Sign In
-            </a>
+            </Link>
           </p>
 
           <div>
