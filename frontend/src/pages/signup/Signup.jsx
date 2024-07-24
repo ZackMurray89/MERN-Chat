@@ -120,8 +120,15 @@ const Signup = () => {
           </p>
 
           <div>
-            <button className='btn btn-block btn-sm mt-2 text-slate-800 bg-amber-600 hover:bg-amber-500 transition-colors ease-in-out delay-50'>
-              Sign Up
+            <button
+              className='btn btn-block btn-sm mt-2 text-slate-800 bg-amber-600 hover:bg-amber-500 transition-colors ease-in-out delay-50'
+              disabled={loading}
+            >
+              {loading ? (
+                <span className='loading loading-spinner'></span>
+              ) : (
+                'Sign Up'
+              )}
             </button>
           </div>
         </form>
